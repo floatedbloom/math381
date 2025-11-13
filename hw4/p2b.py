@@ -1,6 +1,7 @@
 from ortools.linear_solver import pywraplp
 
-def p2():
+def p2b():
+    #SOLUTION ACCOUNTING FOR > INSTEAD OF >=
     #first, solving for player 1
     solver1 = pywraplp.Solver.CreateSolver('GLOP')
     #vars
@@ -50,4 +51,4 @@ def p2():
         print("No optimal solution")
 
 if __name__ == '__main__':
-    p2()
+    p2b()
