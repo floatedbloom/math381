@@ -6,9 +6,3 @@ k = 10000
 
 M = np.linalg.matrix_power(P,k)
 print(M)
-
-u,v = np.linalg.eig(np.transpose(P))
-v *= 1/sum(v)
-
-print(u)
-print(v)
