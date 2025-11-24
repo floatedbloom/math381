@@ -42,9 +42,9 @@ def expregression(x, y, plot=True):
 
     return np.exp(a), np.exp(b)
 
-sample_count = 200000
-n = 3
-ks = [i for i in range(1,10)]
+sample_count = 1000000
+n = 4
+ks = [i for i in range(1,30,3)]
 ps = []
 for k in ks:
     losses = 0
@@ -56,7 +56,7 @@ for k in ks:
             ppl[p2]+=1
         if ppl[0] == 0:
             losses+=1
-    ps.append(losses/sample_count)
+    ps.append(losses/sample_count+1e-12)
 lin_a, lin_b = linregression(ks,ps)
 pow_a, pow_b = powregression(ks,ps)
 exp_a, exp_b = expregression(ks,ps)
