@@ -1,14 +1,14 @@
 import random
 
 sample_count = 1000
-samples = [0] * sample_count
-n, k = 3, 100
+losses = 0
+n, k = 3, 90
 for i in range(sample_count):
-    ppl = [k] * n
+    ppl = [k] + [1] * (n-1)
     while 0 not in ppl:
         p1,p2 = random.sample(range(n), 2) 
         ppl[p1]-=1
         ppl[p2]+=1
-        samples[i]+=1
-
-print(f"k={k}", sum(samples)/len(samples))
+    if ppl[0] == 0:
+        losses+=1
+print(f"k={k}", losses/sample_count)
