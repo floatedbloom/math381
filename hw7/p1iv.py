@@ -1,6 +1,6 @@
 import random
 
-sample_count = 10000
+sample_count = 100000
 samples = [0] * sample_count
 n, k = 3, 6
 for i in range(sample_count):

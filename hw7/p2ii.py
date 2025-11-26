@@ -42,7 +42,7 @@ def expregression(x, y, plot=True):
 
     return np.exp(a), np.exp(b)
 
-sample_count = 200000
+sample_count = 1000000
 n = 3
 ks = [i for i in range(1,10)]
 ps = []
@@ -60,7 +60,7 @@ for k in ks:
 lin_a, lin_b = linregression(ks,ps)
 pow_a, pow_b = powregression(ks,ps)
 exp_a, exp_b = expregression(ks,ps)
-plt.show(block=False)
 print(lin_a, lin_b)
 print(pow_a, pow_b)
 print(exp_a, exp_b)
+plt.show(block=True)

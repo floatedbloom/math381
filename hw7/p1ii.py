@@ -1,6 +1,6 @@
 import random
 
-sample_count = 1000
+sample_count = 10000
 samples = [0] * sample_count
 ppl = [3,3,3]
 n = 3
